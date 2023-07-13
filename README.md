@@ -40,7 +40,9 @@ Random Over Sampling is a technique used to address this issue by artificially i
 
 # Conclusion/Recommendation 
 Both machine learning model successfully predicts house prices with 99% accuracy. Model 2 (oversampled model) outperformed model 1 (original data) in precision and recall value, providing a much lower level of false positives for healthy loans. This low false positive is important for the bank to build lasting customer relationships and expand its loan portfolio with new customers. What this means is if the bank uses Model 2, it has a very low probability that it will decline a loan for a customer who will repay the loan and maintain a healthy standing with the bank; as such, the bank can retain its relationship with its current customers and attract new customers for loans. 
+
 Notably, the prediction score dropped by 1% in Model 2, resulting in a slightly higher number of false positives for healthy loans. The bank certainly does not want to increase its credit-risk-loses by giving out high-risk loans when it thinks it's a healthy loan; however, it is important to note the level of accuracy remains at 99%—additionally, not all high-risk loans results in credit losses since customers' financial situation changes over time. 
+
 Banks need to retain their current customers to survive and maintain a competitive edge. According to Landis (2022), acquiring a new customer costs 5x more than retaining an existing customer and can increase profits from 25% to 95%; therefore, I recommend model 2 for predicting loan default probability. With low false positives, this model will allow the bank to maintain a high customer retention rate where the benefits outweigh of credit losses associated with the false negatives.
 
 # Resources
