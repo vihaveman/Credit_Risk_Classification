@@ -22,22 +22,23 @@ Random Over Sampling is a technique used to address this issue by artificially i
 
 ## Machine Learning Model 1 (Original Data)
 
-*### Accuracy: The accuracy score measures the overall proportion of correctly predicted samples. This model's prediction has an accuracy score of 99%, meaning that 1% of the predictions were incorrect. 
+* **Accuracy**: The accuracy score measures the overall proportion of correctly predicted samples. This model's prediction has an accuracy score of 99%, meaning that 1% of the predictions were incorrect. 
 
-*### Precision: Precision score measures the proportion of true positives and false negatives predicted by the model. The 100% and 85% scores for healthy and high-risk loans, respectively, indicate that the model has a very high precision for healthy loans, which accurately predicts the majority class. However, the precision for high-risk loans is slightly lower, indicating that the model may have more false negatives for the high-risk loans, as shown below:
-*56 FALSE POSITIVES --> The actual loans are healthy; however the model predicted them as high-risk
-*102 FALSE NEGATIVES --> The actual loans are high-risk, but the model predicted them as healthy.
-* ###Recall: Recall scores measure the proportion of true positives out of all actual positive samples. This model predicts 99% for healthy loans and 91% for high-risk loans. These scores indicate that the model has a high recall for both classes, indicating that it effectively identifies healthy and unhealthy loans.
+* P**recision**: Precision score measures the proportion of true positives and false negatives predicted by the model. The 100% and 85% scores for healthy and high-risk loans, respectively, indicate that the model has a very high precision for healthy loans, which accurately predicts the majority class. However, the precision for high-risk loans is slightly lower, indicating that the model may have more false negatives for the high-risk loans, as shown below:
+  * 56 FALSE POSITIVES --> The actual loans are healthy; however the model predicted them as high-risk
+  * 102 FALSE NEGATIVES --> The actual loans are high-risk, but the model predicted them as healthy.
+* **Recall**: Recall scores measure the proportion of true positives out of all actual positive samples. This model predicts 99% for healthy loans and 91% for high-risk loans. These scores indicate that the model has a high recall for both classes, indicating that it effectively identifies healthy and unhealthy loans.
   
 ## Machine Learning Model 2 (Oversampled Data)
 
-*### Accuracy Score: Like the first model, this model's prediction has an accuracy score of 99%, meaning that 1% of the predictions were incorrect. 
+* **Accuracy Score**: Like the first model, this model's prediction has an accuracy score of 99%, meaning that 1% of the predictions were incorrect. 
 
-*###Precision:  While the precision score for healthy loans remains 100%, the score dropped by 1% to 84% for high-risk loans, respectively, indicating that the model has a very high precision for healthy loans, meaning that it also accurately predicts the majority class. However, the precision for high-risk loans is slightly lower, indicating that the model may have more false negatives for the high-risk loans, as shown below:
-*4 FALSE POSITIVES --> The actual loans are healthy; however, the model predicted them as high-risk. This value dropped significantly. 
-*116 FALSE NEGATIVES --> The actual loans are high-risk, but the model predicted them as healthy. This value increased by 14 loans but still less than 1% of the total dataset.
-* ###Recall:  This model predicts a 99% for both healthy and high-risk loans. These scores indicate that the model has a high recall for both classes, indicating that it is also effective at identifying healthy and unhealthy loans.
-#Conclusion/Recommendation 
+* **Precision**:  While the precision score for healthy loans remains 100%, the score dropped by 1% to 84% for high-risk loans, respectively, indicating that the model has a very high precision for healthy loans, meaning that it also accurately predicts the majority class. However, the precision for high-risk loans is slightly lower, indicating that the model may have more false negatives for the high-risk loans, as shown below:
+  * 4 FALSE POSITIVES --> The actual loans are healthy; however, the model predicted them as high-risk. This value dropped significantly. 
+  * 116 FALSE NEGATIVES --> The actual loans are high-risk, but the model predicted them as healthy. This value increased by 14 loans but still less than 1% of the total dataset.
+* **Recall**:  This model predicts a 99% for both healthy and high-risk loans. These scores indicate that the model has a high recall for both classes, indicating that it is also effective at identifying healthy and unhealthy loans.
+
+# Conclusion/Recommendation 
 Both machine learning model successfully predicts house prices with 99% accuracy. Model 2 (oversampled model) outperformed model 1 (original data) in precision and recall value, providing a much lower level of false positives for healthy loans. This low false positive is important for the bank to build lasting customer relationships and expand its loan portfolio with new customers. What this means is if the bank uses Model 2, it has a very low probability that it will decline a loan for a customer who will repay the loan and maintain a healthy standing with the bank; as such, the bank can retain its relationship with its current customers and attract new customers for loans. 
 Notably, the prediction score dropped by 1% in Model 2, resulting in a slightly higher number of false positives for healthy loans. The bank certainly does not want to increase its credit-risk-loses by giving out high-risk loans when it thinks it's a healthy loan; however, it is important to note the level of accuracy remains at 99%—additionally, not all high-risk loans results in credit losses since customers' financial situation changes over time. 
 Banks need to retain their current customers to survive and maintain a competitive edge. According to Landis (2022), acquiring a new customer costs 5x more than retaining an existing customer and can increase profits from 25% to 95%; therefore, I recommend model 2 for predicting loan default probability. With low false positives, this model will allow the bank to maintain a high customer retention rate where the benefits outweigh of credit losses associated with the false negatives.
